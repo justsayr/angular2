@@ -1,0 +1,18 @@
+<p>
+  parent-component works!
+  {{name}}
+
+  <input type="text" [(ngModel)]="name"/>
+  <app-child-component
+      [name] = name
+      (message) = "onMessageReceive($event)"
+      ></app-child-component>
+
+  <span *ngIf = "showButton">
+    <button
+      id="click-button"
+      class="btn btn-default"
+      (click)="clickMe()"
+    > Click Me </button>
+  </span>
+</p>
